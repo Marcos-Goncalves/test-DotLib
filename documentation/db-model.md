@@ -5,3 +5,8 @@
     -   nome
     -   email
     -   cpf
+
+-   PRODUTO
+    -   nomeProduto
+    -   valorUnitário
+    -   codBarras
