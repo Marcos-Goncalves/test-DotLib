@@ -10,3 +10,8 @@
     -   nomeProduto
     -   valorUnitário
     -   codBarras
+
+-   PEDIDO DE COMPRA
+    -   numeroPedido
+    -   dtPedido
+    -   quantidade
