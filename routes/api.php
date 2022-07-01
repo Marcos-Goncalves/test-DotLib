@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 #Rotas#
-Route::resource('produtos', ProdutoController::class);
+Route::resources([
+    'produtos'=>ProdutoController::class,
+    'clientes'=>ClienteController::class
+]);

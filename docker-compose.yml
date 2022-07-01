@@ -10,7 +10,7 @@ services:
       - data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=Laravel
+      - MYSQL_DATABASE=Vendas
   app:
     image: phpmyadmin/phpmyadmin:latest
     links:
