@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 
 class ClienteController extends Controller
 {
@@ -34,7 +35,13 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cliente = Cliente::create([
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'cpf' => $request->cpf
+        ]);
+        
+        $cliente->save();
     }
 
     /**
