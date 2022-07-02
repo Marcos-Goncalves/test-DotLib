@@ -15,7 +15,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -53,7 +53,9 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        //
+        $cliente = Cliente::find($id);
+        
+        return $cliente;
     }
 
     /**
@@ -74,9 +76,11 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreClienteRequest $request, $id)
     {
-        //
+        $cliente = Cliente::find($id)->update($request->all());
+
+        return $cliente;
     }
 
     /**
@@ -87,6 +91,8 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cliente = Cliente::find($id)->delete();
+
+        return $cliente;
     }
 }
