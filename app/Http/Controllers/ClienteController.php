@@ -13,9 +13,13 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
+        $clientePerPage = $request->query("resultPerPage") ?? 10;
+        $page = $request->query('page') ?? 1;
+        $cliente = Cliente::paginate($clientePerPage, ['*'], 'page', $page);
+
+        return $cliente;
     }
 
     /**
