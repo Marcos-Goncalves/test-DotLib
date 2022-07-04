@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 
-class StoreProdutoRequest extends FormRequest
+class UpdateProdutoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,7 +28,7 @@ class StoreProdutoRequest extends FormRequest
         return [
             'nome' => 'required|min:3|max:60',
             'valor' => 'required|numeric',
-            'codBarras' => 'required|unique:produtos'
+            'codBarras' => 'required'
         ];
     }
 
