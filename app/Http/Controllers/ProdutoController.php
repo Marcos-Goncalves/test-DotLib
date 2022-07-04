@@ -14,9 +14,13 @@ class ProdutoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('welcome');
+        $produtoPerPage = $request->query('resultPerPage') ?? 10;
+        $page = $request->query('page') ?? 1;
+        $produto = Produto::paginate($produtoPerPage, ['*'], 'page', $page);
+
+        return $produto;
     }
 
     /**
