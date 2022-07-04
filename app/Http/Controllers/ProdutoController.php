@@ -78,7 +78,9 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $produto = Produto::find($id)->update($request->all());
+
+        return $produto;
     }
 
     /**
