@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 #Rotas#
 Route::resources([
     'produtos'=>ProdutoController::class,
-    'clientes'=>ClienteController::class
+    'clientes'=>ClienteController::class,
+    'pedidos'=>PedidoController::class
 ]);
