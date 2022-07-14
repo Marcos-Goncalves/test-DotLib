@@ -26,10 +26,9 @@ class StorePedidoRequest extends FormRequest
     public function rules()
     {
         return [
-            'quantidade' => 'required|numeric',
             'status' => 'required|numeric|between:1,3',
             'cliente_id' => 'required|exists:clientes,id',
-            'produto_id' => 'required|exists:produtos,id'
+            'pedido_produto_id' => 'required|exists:pedido_produtos,id'
         ];
     }
 
@@ -41,10 +40,9 @@ class StorePedidoRequest extends FormRequest
     public function messages()
     {
         return [
-            'quantidade.required' => 'Quantidade obrigatório',
             'status.required' => 'Status obrigatório',
             'cliente_id.required' => 'Cliente válido necessário',
-            'produto_id.required' => 'Produto válido necessário'
+            'pedido_produto_id.required' => 'Pedido válido necessário'
         ];
     }
 

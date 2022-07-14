@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     use HasFactory;
-    protected $fillable = ['quantidade','status','cliente_id','produto_id'];
+    protected $fillable = ['status','cliente_id','pedido_produto_id'];
 }

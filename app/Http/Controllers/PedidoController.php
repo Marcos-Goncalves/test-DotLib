@@ -37,10 +37,9 @@ class PedidoController extends Controller
     public function store(StorePedidoRequest $request)
     {
         $pedido = Pedido::create([
-            'quantidade' => $request->quantidade,
             'status' => $request->status,
             'cliente_id' => $request->cliente_id,
-            'produto_id' => $request->produto_id
+            'pedido_produto_id' => $request->pedido_produto_id
         ]);
 
         $pedido->save();
