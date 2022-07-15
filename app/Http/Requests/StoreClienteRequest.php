@@ -30,7 +30,7 @@ class StoreClienteRequest extends FormRequest
         return [
             'nome' => 'required|string|min:3|max:60',
             'email'=> 'required|email|unique:clientes',
-            'cpf' => 'required|unique:clientes'
+            'cpf' => 'required|numeric|unique:clientes'
         ];
     }
 
