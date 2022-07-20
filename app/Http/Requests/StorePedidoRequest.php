@@ -27,8 +27,7 @@ class StorePedidoRequest extends FormRequest
     {
         return [
             'status' => 'required|numeric|between:1,3',
-            'cliente_id' => 'required|exists:clientes,id',
-            'pedido_produto_id' => 'required|exists:pedido_produtos,id'
+            'cliente_id' => 'required|exists:clientes,id'
         ];
     }
 

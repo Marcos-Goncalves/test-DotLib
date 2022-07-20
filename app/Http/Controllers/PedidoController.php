@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;
 use App\Models\Pedido;
+use App\Models\PedidoProduto;
 
 class PedidoController extends Controller
 {
@@ -38,11 +39,20 @@ class PedidoController extends Controller
     {
         $pedido = Pedido::create([
             'status' => $request->status,
-            'cliente_id' => $request->cliente_id,
-            'pedido_produto_id' => $request->pedido_produto_id
+            'cliente_id' => $request->cliente_id
         ]);
 
         $pedido->save();
+
+        foreach($request['produtos'] as $produto){
+            $pedidoProd = PedidoProduto::create([
+                'quantidade' => $produto['quantidade'],
+                'produto_id' => $produto['id'],
+                'pedido_id' => $pedido['id']
+            ]);
+
+            $pedidoProd->save();
+        }
     }
 
     /**
