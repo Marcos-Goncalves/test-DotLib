@@ -16,6 +16,8 @@ class CreatePedidoProdutosTable extends Migration
         Schema::create('pedido_produtos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('quantidade');
+            $table->integer('pedido_id')->unsigned();
+            $table->foreign('pedido_id')->references('id')->on('pedidos');
             $table->integer('produto_id')->unsigned();
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->timestamps();

@@ -17,9 +17,7 @@ class CreatePedidosTable extends Migration
             $table->increments('id');
             $table->integer('status');
             $table->integer('cliente_id')->unsigned();
-            $table->integer('pedido_produto_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');
-            $table->foreign('pedido_produto_id')->references('id')->on('pedido_produtos');
             $table->timestamps();
         });
     }
