@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\PedidoProdutoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::resources([
     'clientes'=>ClienteController::class,
     'pedidos'=>PedidoController::class
 ]);
+
+Route::get('/detalhes-pedido/{id}', [PedidoProdutoController::class, 'details']);
