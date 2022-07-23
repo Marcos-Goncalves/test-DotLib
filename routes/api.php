@@ -6,6 +6,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\PedidoProdutoController;
+use App\Http\Controllers\PdfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::resources([
 ]);
 
 Route::get('/detalhes-pedido/{id}', [PedidoProdutoController::class, 'details']);
+
+Route::get('/detalhes-pedido/{id}/pdf', [PdfController::class, 'generatePDF']);
