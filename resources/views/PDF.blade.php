@@ -9,7 +9,10 @@
         <h1>{{ $item->nome}}</h1>
         <p>Data: {{ $item->created_at }}</p>
         <p>Quantidade: {{ $item->quantidade }}</p>
-        <p>Preço: {{ $item->valor }}</p>
+        <p>Preço: R${{ $item->valor }}</p>
     @endforeach
+    <br>
+    <br>
+    <h2>Valor Total: R${{ $valorTotal }}</h2>
 </body>
 </html>

@@ -16,7 +16,11 @@ class PdfController extends Controller
             ->where('pedido_produtos.pedido_id', $id)
             ->get();
 
-        $pdf = PDF::loadView('PDF', compact('pedidoProd'));
+        $valorTotal = $pedidoProd->reduce(function ($total, $item) {
+            return $total += (($item->valor)*$item->quantidade);
+        });
+
+        $pdf = PDF::loadView('PDF', compact('pedidoProd', 'valorTotal'));
 
         return $pdf->download('testPDF.pdf');
     }
