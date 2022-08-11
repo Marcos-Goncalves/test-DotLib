@@ -41,9 +41,12 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-5. No insomnia você ira testar funções da aplicação. Com ele aberto, teste as seguintes rotas.
+5. No insomnia você ira testar funções da aplicação. Para facilitar clique no botão abaixo onde as rotas já se encontram configuradas corretamente.
 
-* Cliente ( /api/clientes/{id} ):
+    [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=CRUD%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FMarcos-Goncalves%2Ftest-DotLib%2Fmain%2FInsomnia.json)
+
+6. Exemplificando as funcionalidades:
+* <b>`Cliente ( /api/clientes/{id} ):`</b>
 1. Para criar
 <img src="resources/img/criandoCliente.jpg">
 
@@ -54,10 +57,32 @@ DB_PASSWORD=root
 <img src="resources/img/updateCliente.jpg">
 
 4. Para deletar
-<img src="resources/img/deleteCliente.jpg">
+<img src="resources/img/deleteCliente.jpg"><br><br>
+
+* <b>`Produto ( /api/produtos/{id} ):`</b>
+1. Para criar
+<img src="resources/img/criandoProduto.png">
+
+2. Para encontrar
+<img src="resources/img/findProduto.png">
+
+3. Para fazer alterações
+<img src="resources/img/updateProduto.png">
+
+4. Para deletar
+<img src="resources/img/deleteProduto.png"><br><br>
+
+* <b>`Pedido ( /api/pedidos )`</b>
+1. Criando pedido
+<img src="resources/img/criandoPedido.png">
+
+2. Encontrando pedidos <b>`( /api/detalhes-pedidos/{id} )`</b>
+<img src="resources/img/findPedido.png">
+
+3. Gerando um PDF do pedido
+<img src="resources/img/pdfPedido.png">
 
 ## 🤝 Colaboradores
-
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
@@ -68,6 +93,14 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         <sub>
           <b>Marcos Gonçalves</b>
         </sub>
+        <sub>
+          <br>
+          <a href="https://github.com/Marcos-Goncalves"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+          <br>
+          <a href="https://www.linkedin.com/in/malxg/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+          <br>
+          <a href="https://twitter.com/ma_alxg"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/><br>
+        </sub>
       </a>
     </td>
     <td align="center">
@@ -76,18 +109,17 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         <sub>
           <b>Gabriel Valin</b>
         </sub>
+        <sub>
+          <br>
+          <a href="https://github.com/Gabriel-Valin"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+          <br>
+          <a href="https://www.linkedin.com/in/gabriel-valin-dev/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+          <br>
+          <a href="https://twitter.com/gvt3ch"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/><br>
+        </sub>
       </a>
     </td>
   </tr>
 </table>
-
-## 💬 Contato
-Espero que tenham gostado da API, qualquer dúvida ou sugestão, redes sociais abaixo para contato:
-
-<a href="https://www.linkedin.com/in/malxg/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/><br>
-
-<a href="https://github.com/Marcos-Goncalves"><img href="https://www.linkedin.com/in/malxg/" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/><br>
-
-<a href="https://twitter.com/ma_alxg"><img href="https://www.linkedin.com/in/malxg/" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/><br>
 
 [⬆ Voltar ao topo](#CRUD)<br>
